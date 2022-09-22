@@ -1,0 +1,86 @@
+:root {
+  --logo-color: rgb(147,127,111);
+}
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+
+#header {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  color: black;
+  margin: 10px;
+  text-align: right;
+} 
+#header-img{
+  height: 45px;
+}
+#brand{
+  display:flex;
+  gap: 20px;
+}
+
+.heading-title{
+  display: none;
+  }
+
+#nav-bar {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  min-width: 290px;
+  position: fixed;
+  top: 0px;
+  right: 0;
+}
+
+
+#nav-bar a {
+  padding: 10px 30px;
+  color: #123456;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+@media only screen and (min-width: 815px) {
+  /* For mobile phones: */
+#header-img{
+  height: 60px;
+}
+  .heading-title{
+    font-size:1.7rem;
+    color: var(--logo-color);
+    padding: 0;
+    margin: auto;
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* For Larger Devices */
+
+
+  .heading-title{
+    font-size:1.7rem;
+    color: var(--logo-color);
+    padding: 0;
+    margin: auto;
+    display: inline;
+  }
+
+  #header {
+    font-size: 1.5rem;
+  } 
+}
