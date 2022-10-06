@@ -1,32 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Cert 3 Survey Form</title>
+    <title>Cert 1 Survey Form</title>
     <link rel="stylesheet" href="styles.css" />
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-    <h1 id="title">title<h1>
-      <p id="description">description</p>
+    <h1 id="title">What is Next?</h1>
+    <p id="description">
+      Maintaining your skills and adding new skills is essential in most
+      professions. Otherwise, you risk professional deprecation. As a software
+      engineer, this definitely applies!
+      <span class="question">What skill should I train on next?</span>
+    </p>
     <form id="survey-form">
-      <label for="name" id="name-label">Name</label>
-      <input type="text" id="name" name="name" placeholder="John Doe" required/>
-      <label for="email"id="email-label">Email</label>
-      <input type="email" id="email" name="email" placeholder="name@domain.com" required/>
-      <label for="number"id="number-label">Number</number>
-      <input type="number" id="number" name="number" min="13" max="120" placeholder="8675309"/>
-      <select id="dropdown">
-        <option value="opt0">(select one)</option>
-        <option value="opt1">Pancakes</option>
-        <option value="opt2">Grits</option>
-      </select>
-    <input type="radio" name="sex" value="male"> Male
-    <input type="radio" name="sex" value="female"> Female
-    <input type="checkbox" value="cheese"> Cheese
-    <input type="checkbox" value="pickles"> Pickles
-    <input type="checkbox" value="peanut-butter"> Peanut Butter
-    <textarea></textarea>
-    <input type="submit" id="submit">
-      </form>
-    </body>    
+      <fieldset name="refresh-certifications">
+        <label for="dropdown"
+          >What refresher certification should I persue?</label
+        >
+        <select id="dropdown" class="refresh" required>
+          <option value="nothing">(select one)</option>
+          <option value="front-end">
+            Front End Development Libraries Certification
+          </option>
+          <option value="js-algorithms-datastructures">
+            JavaScript Algorithms and Data Structures Certification
+          </option>
+          <option value="backend-api">
+            Back End Development and APIs Certification
+          </option>
+        </select>
+      </fieldset>
+
+      <fieldset name="upskill-certifications">
+        <label for="dropdown"
+          >What new skill certification should I persue?</label
+        >
+        <label for="scientific-python">
+          <input
+            type="radio"
+            name="upcert"
+            id="scientific-python"
+            value="scientific-python"
+            class="inline"
+          />
+          Scientific Computing with Python Certification
+        </label>
+        <label for="data-analysis-python">
+          <input
+            type="radio"
+            name="upcert"
+            id="data-analysis-python"
+            value="data-analysis-python"
+            class="inline"
+          />
+          Data Analysis with Python Certification
+        </label>
+        <label for="data-analysis-python">
+          <input
+            type="radio"
+            name="upcert"
+            id="machine-learning-python"
+            value="machine-learning-python"
+            class="inline"
+          />
+          Machine Learning with Python Certification
+        </label>
+        <label for="information-security">
+          <input
+            type="radio"
+            name="upcert"
+            id="information-security"
+            value="information-security"
+            class="inline"
+          />
+          Information Security Certification
+        </label>
+      </fieldset>
+      <fieldset name="other-skills">
+        <label
+          >On which other topics shall I train?
+          <span class="ps"
+            >Note that I do have academic and professional experience with some
+            of the options below.</span
+          >
+        </label>
+        <label for="sass">
+          <input type="checkbox" id="sass" value="sass" class="inline" /> SASS
+        </label>
+        <label for="csharp">
+          <input type="checkbox" value="csharp" id="csharp" class="inline" /> C#
+          .NET
+        </label>
+        <label for="blockchain">
+          <input
+            type="checkbox"
+            value="blockchain"
+            id="blockchain"
+            class="inline"
+          />
+          Blockchain
+        </label>
+        <label for="relational-db">
+          <input
+            type="checkbox"
+            value="relational-db"
+            id="relational-db"
+            class="inline"
+          />
+          Relational Databases
+        </label>
+        <label for="sql">
+          <input type="checkbox" value="sql" id="sql" class="inline" /> SQL
+        </label>
+        <label for="nosql">
+          <input type="checkbox" value="nosql" id="nosql" class="inline" />
+          noSQL
+        </label>
+      </fieldset>
+      <fieldset name="other-suggestions">
+        <label for="user-text"
+          >Please explain your selections here. Also add any additional
+          subjects, comments, or specific training courses you suggest.</label
+        >
+        <textarea
+          id="user-text"
+          placeholder="...You should seek 'xyz' cert because my company is hiring, and if you have the certification I'd be glad to refer you for 'xyz engineer' opening."
+        ></textarea>
+      </fieldset>
+
+      <fieldset name="user-info">
+        <h1>Please enter your information</h1>
+        <label for="name" id="name-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          required
+        />
+        <label for="email" id="email-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="name@domain.com"
+          required
+        />
+        <label for="number" id="number-label"
+          >Is skill enhancement important in your eyes?
+          <span class="ps"
+            >Enter a number from one to five, with zero being not important and
+            five being very important.</span
+          ></label
+        >
+        <input
+          type="number"
+          id="number"
+          name="number"
+          min="1"
+          max="5"
+          placeholder="Number 1-5"
+        />
+      </fieldset>
+      <input type="submit" id="submit" />
+    </form>
+  </body>
 </html>
