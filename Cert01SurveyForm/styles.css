@@ -52,6 +52,9 @@ input, textarea {
   font-weight: 100;
   font-size: 0.8rem;
 }
+#description{
+  max-width: 80%;
+}
 input[type="submit"] {
   display: block;
   width: 60%;
