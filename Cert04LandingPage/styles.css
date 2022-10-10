@@ -1,6 +1,7 @@
 :root {
-  --logo-color: rgb(147,127,111);
+  --logo-color: rgb(147, 127, 111);
 }
+
 html,
 body {
   min-width: 290px;
@@ -10,37 +11,42 @@ body {
   line-height: 1.5;
 }
 
-
 #header {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  color: black;
-  margin: 10px;
-  text-align: right;
-} 
-#header-img{
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: beige;
+  width: 100%;
+  opacity: 80%;
+}
+
+#header-img {
   height: 45px;
 }
-#brand{
-  display:flex;
+
+#brand {
+  display: flex;
   gap: 20px;
 }
 
-.heading-title{
+.heading-title {
   display: none;
-  }
+}
 
 #nav-bar {
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   min-width: 290px;
   position: fixed;
   top: 0px;
   right: 0;
 }
-
 
 #nav-bar a {
   padding: 10px 30px;
@@ -48,32 +54,69 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+main {
+  position: relative;
+  top: 5rem;
+}
+main,
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
 
+article {
+  align-self: center;
+}
 
 section article {
   color: #4d4e53;
   margin: 15px;
   font-size: 0.96em;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input {
+  margin: 0.4rem 1rem 1rem 1rem;
+  max-width: 20rem;
+}
+
+textarea {
+  margin: 0.4rem 1rem 1rem 1rem;
+  max-width: 90%;
+  height: 4rem;
+}
+
+#submit {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+}
+
 @media only screen and (min-width: 815px) {
   /* For mobile phones: */
-#header-img{
-  height: 60px;
-}
-  .heading-title{
-    font-size:1.7rem;
+  #header-img {
+    height: 60px;
+  }
+
+  .heading-title {
+    font-size: 1.7rem;
     color: var(--logo-color);
     padding: 0;
     margin: auto;
     display: inline;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   /* For Larger Devices */
 
-
-  .heading-title{
-    font-size:1.7rem;
+  .heading-title {
+    font-size: 1.7rem;
     color: var(--logo-color);
     padding: 0;
     margin: auto;
@@ -82,5 +125,5 @@ section article {
 
   #header {
     font-size: 1.5rem;
-  } 
+  }
 }
