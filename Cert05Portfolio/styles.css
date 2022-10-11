@@ -1,18 +1,93 @@
 :root {
-  --logo-color: rgb(147,127,111);
+  /* // variables */
+  --primary-color: rgb(3, 3, 3);
+  --light-text-color: #eee;
+  --dark-text-color: #111;
+  --secondary-color: goldenrod;
+  --logo-color: rgb(147, 127, 111);
 }
+
 .welcome-section {
   height: 100vh;
 }
-#navbar{
+
+#navbar {
   position: fixed;
-  top:0px;
+  top: 0px;
 }
 
+/* Contacts */
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img.thumbNail {
+  width: 100%;
+  border: 0.2rem rgba(155, 155, 155, 50%) solid;
+}
+
+.projImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0.3rem rgba(155, 155, 155, 50%) solid;
+  position: relative;
+  padding-top: 66%;
+  margin-bottom: 0.4rem;
+}
+
+.projThumbnail {
+  position: absolute;
+  height: 96%;
+  top: 2%;
+  width: 50%;
+  border-radius: 0.2rem;
+}
+
+.social-media {
+  margin: 1rem 0 0 0;
+  padding: 0.4rem;
+}
+
+.social-media a {
+  color: var(--light-text-color);
+}
+
+.social-media a:hover {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: all 0.7s ease-out;
+}
+
+/* // Button Styles */
+.button {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.button:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.7s ease-out;
+}
+.button-dark {
+  background: var(--primary-color);
+  color: var(--light-text-color);
+}
+.button-dark.button:hover {
+  color: var(--dark-text-color);
+}
+.button-light {
+  background-color: lightslategray;
+  color: black;
+}
 /* Mobile first, genius */
 @media only screen and (min-width: 815px) {
   /* Moderately sized devices + */
-  .info1{
-    font-size:1.7rem;
+  .info1 {
+    font-size: 1.7rem;
   }
 }
