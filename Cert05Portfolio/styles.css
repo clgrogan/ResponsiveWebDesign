@@ -1,93 +1,165 @@
 :root {
   /* // variables */
-  --primary-color: rgb(3, 3, 3);
-  --light-text-color: #eee;
-  --dark-text-color: #111;
+  --primary-color: rgba(3, 3, 3, 0.806);
   --secondary-color: goldenrod;
-  --logo-color: rgb(147, 127, 111);
+  --light-text-color: #eee;
+  --light-btn-border-color: #b3b3b3;
+  --dark-text-color: #222;
+  --image-container-height: 100px;
+  --image-height: 16rem;
+  --image-max-width: 24rem;
+  --top-padding-adjustment: 60px;
+}
+* {  box-sizing: border-box;}
+body {
+  position: relative;
+  height:100%;
+  margin: 0;
+  min-height: 100%; 
+  background-color: var(--primary-color);
+  color:var(--light-text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
-.welcome-section {
-  height: 100vh;
+main{
+  margin:1.5rem;
 }
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
 
-#navbar {
+#header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px;
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: var(--primary-color);
+  width: 100%;
+  opacity: 80%;
 }
-
-/* Contacts */
+#header-img {
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: var(--top-padding-adjustment);
+}
+#brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-text-color);
+  border: solid var(--primary-color) 3px;
+  border-radius: 50%;
+  height: 50px;width:50px;
+}
+.navbar{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar a{
+  text-decoration: none;
+  color: var(--light-text-color);
+  padding: 0 1rem;
+}
+#welcome-section {
+  padding-top: var(--top-padding-adjustment);
+  margin-bottom: 1rem;
+}
+.lg-heading {
+  font-size: 3rem; }
+.text-secondary {
+  color: var(--secondary-color); }
+/* Projects */
+#projects{
+  padding-top: var(--top-padding-adjustment);}
 .projects {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  background-color: transparent;
+  padding: 0.5rem;
 }
-
-img.thumbNail {
+.a-thumb{
+  height: var(--image-height);
+}
+.projects img.thumbNail {
+  height: var(--image-height);
   width: 100%;
-  border: 0.2rem rgba(155, 155, 155, 50%) solid;
+  object-fit: cover;
+  border: 0.2rem rgba(238, 238, 238, 0.8) solid;
 }
-
-.projImageContainer {
+.projects img.thumbNail:hover {
+  opacity: 0.5;
+  border-color: var(--secondary-color);
+  transition: all 0.7s ease-out;
+}
+.projects .projImageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: var(--image-height);
   width: 100%;
-  border: 0.3rem rgba(155, 155, 155, 50%) solid;
+  border: 0.2rem var(--light-btn-border-color) solid;
   position: relative;
-  padding-top: 66%;
-  margin-bottom: 0.4rem;
+  background: url(../images/vscode-react-medium-screenshot.jpg);
+  background-size: content;
 }
-
-.projThumbnail {
+.projects .projImageContainer:hover {
+  opacity: 0.5;
+  border-color: var(--secondary-color);
+  transition: all 0.7s ease-out;
+}
+.projects .projImageContainer .projThumbnail {
   position: absolute;
   height: 96%;
   top: 2%;
-  width: 50%;
+  max-width: 90%;
   border-radius: 0.2rem;
+  object-fit: scale-down;
 }
 
-.social-media {
-  margin: 1rem 0 0 0;
-  padding: 0.4rem;
-}
-
-.social-media a {
-  color: var(--light-text-color);
-}
-
-.social-media a:hover {
-  color: var(--secondary-color);
-  font-size: 1.2rem;
-  transition: all 0.7s ease-out;
-}
-
-/* // Button Styles */
-.button {
+.button,
+.button-dark,
+.button-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem;
+  margin: 0.5rem 0;
 }
-.button:hover {
-  background-color: var(--secondary-color);
-  transition: all 0.7s ease-out;
+.button:hover,
+.button-dark:hover,
+.button-light:hover {
+  background: var(--secondary-color);
+  color: var(--dark-text-color);
 }
+
 .button-dark {
   background: var(--primary-color);
   color: var(--light-text-color);
 }
-.button-dark.button:hover {
+
+.button-light {
+  background: var(--light-btn-border-color);
   color: var(--dark-text-color);
 }
-.button-light {
-  background-color: lightslategray;
-  color: black;
+
+@media screen and (min-width: 767px) {
+  .lg-heading {
+    font-size: 4rem; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-/* Mobile first, genius */
-@media only screen and (min-width: 815px) {
-  /* Moderately sized devices + */
-  .info1 {
-    font-size: 1.7rem;
+@media screen and (min-width: 992px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

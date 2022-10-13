@@ -5,193 +5,182 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon-cg.png" />
     <script
       src="https://kit.fontawesome.com/5c51862814.js"
       crossorigin="anonymous"
     ></script>
     <title>Curt Grogan Portfolio</title>
   </head>
+
   <body>
     <header id="header">
-      <nav id="navbar">
+      <div id="brand">
+        <img id="header-img" src="./images/favicon-cg.png" alt="CG Logo" />
+      </div>
+      <nav id="navbar" class="navbar">
         <a class="nav-link" href="#welcome-section">Gist</a>
-        <a class="nav-link" href="#section_two">Projects</a>
-        <a class="nav-link" href="#section_three">Contact</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <!-- <a class="nav-link" href="#section_three">Contact</a> -->
       </nav>
     </header>
     <main id="main">
       <section id="welcome-section">
         <h1 class="lg-heading">
-          Curt <span class="text-secondary">Grogan</span>
+          Curt
+          <span class="text-secondary">Grogan</span>
         </h1>
         <h2 class="sm-heading">Humble, Hungry, and Agile Software Engineer</h2>
       </section>
       <section id="projects">
-        Check out some of my work...
-        <article class="project-tile">
-          <a
-            class="tile-link"
-            href="https://curtg.netlify.app/"
-            target="_blank"
-          >
-            <img
-              src="./resources/CurtGroganPortfolio.png"
-              id="portfolio-img"
-              alt="Screen Shot of another of Curt Grogan's Portfolio Pages"
-            />
-            <div>Another Portfolio</div></a
-          >
-        </article>
-        <article class="project-tile">tile 2</article>
-        <article class="project-tile">tile 3</article>
-      </section>
-      <section class="projects">
-        <div class="item">
-          <a
-            href="https://honey-get-client-cgrogan.netlify.app/"
-            target="_blank"
-          >
-            <div id="bg-proj1" class="projImageContainer">
+        <h2 class="lg-heading">Projects</h2>
+        <div class="projects">
+          <div class="project-tile">
+            <a href="#openModal">
+              <div id="bg-proj1" class="projImageContainer">
+                <img
+                  class="thumbnail projThumbnail"
+                  src="images/project1WalkThrough.gif"
+                  alt="
+              Animated screenshots of full-stack application UI."
+                />
+              </div>
+            </a>
+            <a href="#openModal" class="button-light">
+              <i class="fas fa-eye">Full-stack React / C# .NET</i>
+            </a>
+            <!-- 
+              <div id="openModal" class="modalDialog">
+            <div class="modalBody">
+              <a href="#" title="Close" class="close"
+                ><i class="far fa-times-circle"></i
+              ></a>
+              <h2>
+                Honey Get Lists <span class="text-secondary">Full-stack</span>
+              </h2>
               <img
-                class="projThumbnail"
-                src="images/projects/project1WalkThrough.gif"
+                class="projectModalImage"
+                src="images/project1WalkThrough.gif"
                 alt="Honey Get List - Project 1"
               />
+              <p>
+                "Honey Get List" is a shopping or "To-do" list full-stack
+                application. It is a mobile first responsive application
+                demostrating full CRUD capabilities from front to back.
+              </p>
+              <p>
+                The front-end is a Single Page Application (SPA) built with
+                React, JavaScript, HTML, and CSS. The application was manually
+                deployed to Netlify and then refactored to utilize continous
+                deployment via GitHub.
+              </p>
+              <p>
+                The back-end serves up a RESTful API and is built with C# | .NET
+                utilizing Entity Framework Core with a SQL database. Deployment
+                is to Heroku utilizing a Docker container.
+              </p>
             </div>
-          </a>
-          <a
-            href="https://honey-get-client-cgrogan.netlify.app/"
-            target="_blank"
-            class="button button-light"
-            ><i class="fas fa-eye"> Full-stack | React / . Net C#</i></a
-          >
-          <a
-            href="https://github.com/clgrogan/HoneyGetListFullStack"
-            target="_blank"
-            class="button button-dark"
-            ><i class="fab fa-github"> GitHub</i></a
-          >
-        </div>
-        <div class="item">
-          <a href="https://minion-manager-cgrogan.netlify.com/" target="_blank">
-            <img
-              class="thumbNail"
-              src="images/projects/project2.jpg"
-              alt="First Project"
-            />
-          </a>
-          <a
-            href="https://minion-manager-cgrogan.netlify.com/"
-            target="_blank"
-            class="button button-light"
-            ><i class="fas fa-eye"> React App | Consume Rest API</i></a
-          >
-          <a
-            href="https://github.com/clgrogan/MinionManager"
-            target="_blank"
-            class="button button-dark"
-            ><i class="fab fa-github"> GitHub</i></a
-          >
-        </div>
-        <div class="item">
-          <a href="https://search-dogs.netlify.app" target="_blank">
-            <img
-              class="thumbNail"
-              src="images/projects/project3.jpg"
-              alt="First Project"
-            />
-          </a>
-          <a
-            href="https://search-dogs.netlify.app"
-            target="_blank"
-            class="button button-light"
-            ><i class="fas fa-eye"> Project</i></a
-          >
-          <a
-            href="https://github.com/clgrogan/YoutubeDogVideoSearch"
-            target="_blank"
-            class="button button-dark"
-            ><i class="fab fa-github"> GitHub</i></a
-          >
-        </div>
-        <div class="item">
-          <a
-            href="https://github-followers-angular-project.netlify.app/"
-            target="_blank"
-          >
-            <img
-              class="thumbNail"
-              src="images/projects/project4.jpg"
-              alt="First Project"
-            />
-          </a>
-          <a
-            href="https://github-followers-angular-project.netlify.app/"
-            target="_blank"
-            class="button button-light"
-            ><i class="fas fa-eye"> Project</i></a
-          >
-          <a
-            href="https://github.com/clgrogan/GitHubFollowersExercise-NG"
-            target="_blank"
-            class="button button-dark"
-            ><i class="fab fa-github"> GitHub</i></a
-          >
-        </div>
-        <div class="item">
-          <a href="https://curtg.netlify.com/" target="_blank">
-            <img
-              class="thumbNail"
-              src="images/projects/project5.jpg"
-              alt="First Project"
-            />
-          </a>
-          <a
-            href="https://curtg.netlify.com/"
-            target="_blank"
-            class="button button-light"
-            ><i class="fas fa-eye"> Project</i></a
-          >
-          <a
-            href="https://github.com/clgrogan/My-Portfolio-Vanilla"
-            target="_blank"
-            class="button button-dark"
-            ><i class="fab fa-github"> GitHub</i></a
-          >
-        </div>
-      </section>
-      <section class="contact" id="section_three">
-        <header>Contact Us</header>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <label for="email">Enter your email address:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="jane@doe.com"
-            required
-          />
-          <label for="message">How can we help you?</label>
-          <textarea
-            id="message"
-            placeholder="...enter any questions or comments you have here."
-            required
-          ></textarea>
-          <input type="submit" id="submit" />
-        </form>
-        <div class="social-media">
-          <a
-            id="profile-link"
-            href="https://linkedin.com/in/curtgrogan"
-            target="_blank"
-            ><i class="fab fa-linkedin fa-2x"></i
-          ></a>
-          <a
-            id="profile-link"
-            href="https://github.com/clgrogan"
-            target="_blank"
-            ><i class="fab fa-github fa-2x"></i
-          ></a>
+          </div> 
+        -->
+            <a
+              href="https://github.com/clgrogan/HoneyGetListFullStack"
+              id="profile-link"
+              target="_blank"
+              class="button-dark"
+            >
+              <i class="fab fa-github">GitHub</i>
+            </a>
+          </div>
+          <div class="project-tile">
+            <div class="a-thumb">
+              <a
+                class="a-thumb"
+                href="https://search-dogs.netlify.app"
+                id="profile-link"
+                target="_blank"
+              >
+                <img
+                  class="thumbNail"
+                  src="images/dog-search-project.png"
+                  alt="Photo of computer and phone with application on the screens."
+                />
+              </a>
+            </div>
+            <a
+              href="https://search-dogs.netlify.app"
+              id="profile-link"
+              target="_blank"
+              class="button-light"
+            >
+              <i class="fas fa-eye">React App uses Youtube API</i>
+            </a>
+            <a
+              href="https://github.com/clgrogan/YoutubeDogVideoSearch"
+              id="profile-link"
+              target="_blank"
+              class="button-dark"
+            >
+              <i class="fab fa-github">GitHub</i>
+            </a>
+          </div>
+          <div class="project-tile">
+            <div class="a-thumb">
+              <a
+                href="https://github-followers-angular-project.netlify.app/"
+                id="profile-link"
+                target="_blank"
+              >
+                <img
+                  class="thumbNail"
+                  src="images/project4.jpg"
+                  alt="First Project"
+                />
+              </a>
+            </div>
+            <a
+              href="https://github-followers-angular-project.netlify.app/"
+              id="profile-link"
+              target="_blank"
+              class="button-light"
+            >
+              <i class="fas fa-eye">Angular App uses Github API</i>
+            </a>
+            <a
+              href="https://github.com/clgrogan/GitHubFollowersExercise-NG"
+              id="profile-link"
+              target="_blank"
+              class="button-dark"
+            >
+              <i class="fab fa-github">GitHub</i>
+            </a>
+          </div>
+          <div class="project-tile">
+            <div class="a-thumb">
+              <a href="https://curtg.netlify.com/" target="_blank">
+                <img
+                  class="thumbNail"
+                  src="images/project5.jpg"
+                  alt="First Project"
+                />
+              </a>
+            </div>
+            <a
+              href="https://curtg.netlify.com/"
+              id="profile-link"
+              target="_blank"
+              class="button-light"
+            >
+              <i class="fas fa-eye">Project</i>
+            </a>
+            <a
+              href="https://github.com/clgrogan/My-Portfolio-Vanilla"
+              id="profile-link"
+              target="_blank"
+              class="button-dark"
+            >
+              <i class="fab fa-github">GitHub</i>
+            </a>
+          </div>
         </div>
       </section>
     </main>
